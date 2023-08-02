@@ -39,11 +39,5 @@ class UserSeeder extends Seeder
             'role_id' => 2,
             'divisi_id' => 3
         ]);
-        User::create([
-            'name' => 'dirgantara',
-            'password' => 'password',
-            'role_id' => 2,
-            'divisi_id' => 4
-        ]);
     }
 }
