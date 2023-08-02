@@ -16,16 +16,23 @@ php artisan sb:seed
 
 //admin
 'name' => 'Admin',
+
 'password' => 'password',
 
 //Kepala Bagian Administrasi
+
 'name' => 'yanti',
+
 'password' => 'password',
 
 //Kepala Bagian Keuangan
+
 'name' => 'yanto',
+
 'password' => 'password',
 
 //Kepala Bagian Marketing
+
 'name' => 'suryana',
+
 'password' => 'password',
