@@ -48,7 +48,7 @@ class OrderEkspor implements FromCollection, WithHeadings, WithColumnWidths, Wit
     }
     public function map($order): array
     {
-        $approved = $order->status ? 'Ya' : 'Tidak';
+        $approved = $order->status ? 'Disetujui' : 'Tidak';
         // Ambil kolom-kolom yang ingin Anda tampilkan dari model Customer
         return [
             $order->id,
