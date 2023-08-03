@@ -18,14 +18,22 @@ class PemakaianKendaraanChart
 
     public function build()
     {
-        $chartData = Order::select(DB::raw('MONTH(tanggal_ambil) as month'), DB::raw('COUNT(*) as count'))
+        $chartData = Order::select(
+            DB::raw('DATE_FORMAT(tanggal_ambil, "%Y-%m") as month'),
+            DB::raw('COUNT(*) as count')
+        )
             ->groupBy('month')
+            ->orderBy('month', 'asc')
             ->get();
 
+        $chartData->transform(function ($item) {
+            $date = Carbon::createFromFormat('Y-m', $item->month);
+            $item->month = $date->translatedFormat('F');
+            return $item;
+        });
+
         $data = $chartData->pluck('count')->toArray();
-        $labels = $chartData->pluck('month')->map(function ($month) {
-            return Carbon::createFromFormat('!m', $month)->format('M'); // Mengubah angka bulan menjadi format tiga huruf (Jan, Feb, Mar, dst.)
-        })->toArray();
+        $labels = $chartData->pluck('month')->toArray();
         return $this->chart->lineChart()
             ->setTitle('Pemesanan Kendaraan')
             ->addData('Kendaraan', $data)

@@ -26,7 +26,7 @@ class KendaraanController extends Controller
     public function create()
     {
         $kendaraan = Kendaraan::all();
-        return view('admin.kendaraan.create');
+        return view('admin.kendaraan.create', ['judul' => 'Kendaraan']);
     }
 
     /**
@@ -52,7 +52,7 @@ class KendaraanController extends Controller
     {
         $kendaraan = Kendaraan::find($id);
 
-        return view('admin.kendaraan.edit', compact('kendaraan'));
+        return view('admin.kendaraan.edit', ['judul' => 'Kendaraan'], compact('kendaraan'));
     }
 
     /**

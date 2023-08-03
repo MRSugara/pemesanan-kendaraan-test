@@ -37,7 +37,7 @@ class SupirController extends Controller
     public function edit(Supir $supir, $id)
     {
         $supir = Supir::find($id);
-        return view('admin.supir.edit', compact('supir'));
+        return view('admin.supir.edit', ['judul' => 'Supir'], compact('supir'));
     }
 
     /**

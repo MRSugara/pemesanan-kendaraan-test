@@ -38,7 +38,7 @@ class OrderController extends Controller
         $divisi = Divisi::all();
         $supir = Supir::where('status', 1)->get();
         $kendaraan = Kendaraan::where('status', 1)->get();
-        return view('admin.order.create', compact('kendaraan', 'order', 'divisi', 'supir'));
+        return view('admin.order.create', ['judul' => 'Order'], compact('kendaraan', 'order', 'divisi', 'supir'));
     }
 
     /**
@@ -68,7 +68,7 @@ class OrderController extends Controller
         $divisi = Divisi::all();
         $supir = Supir::all();
         $kendaraan = Kendaraan::all();
-        return view('admin.order.edit', compact('kendaraan', 'order', 'divisi', 'supir'));
+        return view('admin.order.edit', ['judul' => 'Order'], compact('kendaraan', 'order', 'divisi', 'supir'));
     }
 
     /**
