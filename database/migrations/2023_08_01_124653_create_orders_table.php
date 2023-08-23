@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('kendaraan_id');
             $table->integer('divisi_id');
             $table->integer('supir_id');
-            $table->date('tanggal_ambil');
-            $table->date('tanggal_kembali');
+            $table->date('tanggal_ambil')->nullable();
+            $table->date('tanggal_kembali')->nullable();
             $table->boolean('status')->default(false);
             $table->boolean('konfirmasi1')->default(false);
             $table->boolean('konfirmasi2')->default(false);

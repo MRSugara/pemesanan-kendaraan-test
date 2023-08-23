@@ -7,6 +7,8 @@
         <div>
             <a href="{{ route('order.create') }}" class="btn btn-primary mb-3">Create new data</a>
             <a href="{{ route('ekspor') }}" class="btn btn-success mb-3">Export</a>
+            <a href="{{ route('pivot') }}" class="btn btn-success mb-3">Export Pivot</a>
+
 
         </div>
         <div class="card mb-4">

@@ -28,7 +28,7 @@ class PemakaianKendaraanChart
 
         $chartData->transform(function ($item) {
             $date = Carbon::createFromFormat('Y-m', $item->month);
-            $item->month = $date->translatedFormat('F');
+            $item->month = $date->translatedFormat('F Y');
             return $item;
         });
 
