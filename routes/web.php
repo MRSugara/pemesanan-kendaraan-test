@@ -45,7 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/supir/delete/{id}', [SupirController::class, 'destroy'])->name('supir.destroy');
 
     Route::get('/ekspor', [OrderController::class, 'ekspor'])->name('ekspor');
-    Route::get('/pivot', [OrderController::class, 'pivot'])->name('pivot');
+    // Route::get('/pivot', [OrderController::class, 'pivot'])->name('pivot');
 
 
     Route::get('/order', [OrderController::class, 'index'])->name('order.index');
