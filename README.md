@@ -14,6 +14,12 @@ php artisan migrate
 
 php artisan sb:seed
 
+Tata Cara Approved
+
+1. Admin tidak memiliki hak akses atas approve.
+2. Approve hanya bisa dilakukan oleh kepala bagian masing masing divisi dan kepala bagian administrasi.
+3. status approve akan di setujui apa bila 2 Kepala bagian(masing masing dan administrasi), apabila hanya satu yang menyetujui maka akan terlihat belum disetujui oleh 2 pihak kepala bagian.
+
 //admin
 'name' => 'Admin',
 
