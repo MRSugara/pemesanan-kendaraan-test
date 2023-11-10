@@ -9,7 +9,7 @@
         aria-label="Search">
     <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-            <form class="nav-link px-3" action="/logout" method="POST">
+            <form class="nav-link px-3" action="/logout" method="GET">
                 @csrf
                 <button type="submit" class="dropdown-item">Sign out</button>
             </form>
@@ -47,7 +47,16 @@
                             Supir
                         </a>
                     </li>
+                    @if (Auth::user()->role_id == 1)
+                        <li class="nav-item">
+                            <a class="nav-link {{ $judul === 'User' ? 'active' : '' }}" href="/user">
+                                <span data-feather="user-plus" class="align-text-bottom"></span>
+                                User
+                            </a>
+                        </li>
+                    @endif
                 </ul>
+
 
                 @if (Auth::user()->role_id == 2)
                     <h6

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Divisi;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -11,24 +12,27 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('auth.register');
+        $divisi = Divisi::all();
+        $role = Role::all();
+        return view('auth.registrasi',compact('divisi','role'));
     }
 
     public function store(Request $request)
     {
 
-        $role = Role::where('name', 'User')->first();
+
 
         $store = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            // 'role_id' => $role->id,
+            'role_id' => $request->role,
+            'divisi_id'=>$request->divisi,
             'password' => Hash::make($request->password),
         ]);
 
         if ($store) {
-            return redirect()->route('login')->with('success', 'Register berhasil, silahkan login');
+            return redirect()->route('login')->with('success', 'Register berhasil, silahkan hubungi admin');
         } else {
             return redirect()->back()->with('error', 'Register gagal, silahkan coba lagi');
         }

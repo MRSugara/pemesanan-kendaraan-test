@@ -26,7 +26,7 @@ class LoginController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
+        if (Auth::attempt(['name' => $request->name, 'password' => $request->password]) && Auth::user()->approve==1) {
             $request->session()->regenerate();
 
             return redirect('/');

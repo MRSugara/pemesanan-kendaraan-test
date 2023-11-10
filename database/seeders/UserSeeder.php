@@ -18,26 +18,33 @@ class UserSeeder extends Seeder
             'name' => 'Admin',
             'password' => 'password',
             'role_id' => 1,
-            'divisi_id' => 1
+            'divisi_id' => 1,
+            'approve'=>1
         ]);
         User::create([
             'name' => 'yanti',
             'password' => 'password',
             'role_id' => 2,
-            'divisi_id' => 1
+            'divisi_id' => 1,
+            'approve'=>1
+
         ]);
         //User
         User::create([
             'name' => 'yanto',
             'password' => 'password',
             'role_id' => 2,
-            'divisi_id' => 2
+            'divisi_id' => 2,
+            'approve'=>1
+
         ]);
         User::create([
             'name' => 'suryana',
             'password' => 'password',
             'role_id' => 2,
-            'divisi_id' => 3
+            'divisi_id' => 3,
+            'approve'=>1
+
         ]);
     }
 }
