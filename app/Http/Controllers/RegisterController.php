@@ -20,14 +20,13 @@ class RegisterController extends Controller
     public function store(Request $request)
     {
 
-
-
         $store = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
             'role_id' => $request->role,
             'divisi_id'=>$request->divisi,
+            'approve' =>0,
             'password' => Hash::make($request->password),
         ]);
 

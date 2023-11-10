@@ -43,18 +43,29 @@
 
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" name="name"
-                                    placeholder="name@example.com" required>
+                                    placeholder="username" required>
                                 <label for="floatingInput">Username</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" name="name"
-                                    placeholder="name@example.com" required>
-                                <label for="floatingInput">Divisi</label>
+                                <select class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example" name="divisi">
+                                    <option selected disabled>- Pilih Divisi -</option>
+                                    @foreach ($divisi as $data)
+                                        <option value="{{ $data->id }}">{{ $data->name }}</option>
+                                    @endforeach
+                                </select>
+                                <label for="floatingSelect">Divisi</label>
+
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" id="floatingInput" name="name"
-                                    placeholder="name@example.com" required>
-                                <label for="floatingInput">Role</label>
+                                <select class="form-select" id="floatingSelect"
+                                    aria-label="Floating label select example" name="role">
+                                    <option selected disabled>- Pilih Role -</option>
+                                    @foreach ($role as $data)
+                                        <option value="{{ $data->id }}">{{ $data->name }}</option>
+                                    @endforeach
+                                </select>
+                                <label for="floatingSelect">Role</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="password" class="form-control" id="floatingPassword" name="password"
@@ -62,8 +73,8 @@
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
-                                    In</button>
+                                <button class="btn btn-primary btn-login text-uppercase fw-bold"
+                                    type="submit">Register</button>
 
                                 <br>
                                 <a href="{{ route('login') }}">Login</a>

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('divisi_id');
             $table->integer('role_id');
-            $table->boolean('approve');
+            $table->boolean('approve')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });
