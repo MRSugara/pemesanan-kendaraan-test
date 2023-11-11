@@ -20,6 +20,7 @@
                             <th scope="col">Name</th>
                             <th scope="col">Divisi</th>
                             <th scope="col">Role</th>
+                            {{-- <th scope="col">Password</th> --}}
                             <th scope="col">Persetujuan</th>
                             <th scope="col">Action</th>
 
@@ -37,6 +38,7 @@
                                 @else
                                     <td> Kepala bagian</td>
                                 @endif
+                                {{-- <td>{{ Illuminate\Support\Facades\Hash::needsRehash($data->password) }}</td> --}}
 
                                 <td>
                                     @if ($data->approve)
