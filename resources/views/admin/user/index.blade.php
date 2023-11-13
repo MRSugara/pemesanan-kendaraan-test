@@ -24,6 +24,7 @@
                             <th scope="col">Persetujuan</th>
                             <th scope="col">Action</th>
 
+
                         </tr>
                     </thead>
                     <tbody>
@@ -47,27 +48,27 @@
                                         <small class="text-danger">Unapproved</small>
                                     @endif
                                 </td>
-                                <td>
+                                <td class="d-flex justify-content-center ">
                                     @if ($data->approve)
                                         <form onsubmit="return confirm('Are you sure? ');"
                                             action="{{ route('user.reject', $data->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
-                                            <button type="submit" class="btn btn-sm btn-danger">Reject</button>
+                                            <button type="submit" class="btn btn-sm btn-danger"
+                                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Reject</button>
                                         </form>
                                     @else
                                         <form onsubmit="return confirm('Are you sure? ');"
                                             action="{{ route('user.approve', $data->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
-                                            <button type="submit" class="btn btn-sm btn-success">Approve</button>
+                                            <button type="submit" class="btn btn-sm btn-success"
+                                                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">Approve</button>
                                         </form>
                                     @endif
-                                </td>
-                                {{-- <td>
-                                    <a href="/order/delete/{{ $data->id }}" class="badge bg-danger"><span
+                                    <a href="/user/delete/{{ $data->id }}" class="badge bg-danger mx-2"><span
                                             data-feather="trash-2"></span></a>
-                                </td> --}}
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

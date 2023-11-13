@@ -33,12 +33,17 @@ Route::middleware('auth')->group(function () {
         Route::middleware('login:1')->group(function (){
 
             Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
             Route::middleware('role:Admin')->group(function () {
 
-            Route::get('/user', [UserController::class, 'index'])->name('user');
-            Route::put('/user/approve/{id}', [UserController::class, 'approve'])->name('user.approve');
-            Route::put('/user/reject/{id}', [UserController::class, 'reject'])->name('user.reject');
+                Route::get('/user', [UserController::class, 'index'])->name('user');
+                Route::put('/user/approve/{id}', [UserController::class, 'approve'])->name('user.approve');
+                Route::put('/user/reject/{id}', [UserController::class, 'reject'])->name('user.reject');
+                Route::get('/user/delete/{id}', [UserController::class, 'destroy'])->name('user.delete');
+
+
             });
+
             Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan.index');
             Route::get('/kendaraan/create', [KendaraanController::class, 'create'])->name('kendaraan.create');
             Route::post('/kendaraan', [KendaraanController::class, 'store'])->name('kendaraan.store');
