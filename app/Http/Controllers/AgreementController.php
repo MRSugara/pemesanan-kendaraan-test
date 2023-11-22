@@ -42,6 +42,7 @@ class AgreementController extends Controller
             $order->update([
                 'status' => 1,
             ]);
+            //
         } elseif ($order->konfirmasi1 == 1 && $order->divisi_id == 1) {
             $order->update([
                 'status' => 1,
@@ -67,11 +68,16 @@ class AgreementController extends Controller
                 'konfirmasi1' => 0,
             ]);
         }
-        if ($order->konfirmasi1 == 1 && $order->divisi_id == 1) {
+        if ($order->konfirmasi2 == 0 || $order->konfirmasi1 == 0) {
             $order->update([
-                'status' => 1,
+                'status' => 0,
+            ]);
+        }elseif($order->konfirmasi1 == 0 && $order->divisi_id == 1) {
+            $order->update([
+                'status' => 0,
             ]);
         }
+
         // redirect ke halaman product.index
         return redirect('/persetujuan');
     }
