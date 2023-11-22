@@ -14,6 +14,8 @@ php artisan migrate
 
 php artisan sb:seed
 
+php artisan key:generate
+
 Tata Cara Approved
 
 1. Admin tidak memiliki hak akses atas approve.
