@@ -23,7 +23,7 @@ Tata Cara Approved
 Pembuatan akun baru
 
 1. Registrasi seperti biasa
-2. Login dengan akun Admin
+2. Login dengan akun Admin yang terdapat dibawah
 3. Masuk sidebar user, lalu approve akun yang sudah anda buat
 
 //admin
