@@ -9,6 +9,39 @@
             {!! $chart->container() !!}
         @endforeach
 
+        {{-- <div class="card mb-4">
+            <div class="card-body">
+
+                <table class="table table-striped table-sm" id="">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="5" style="text-align: center;">asdfasdf</th>
+                        <tr>
+                            <th scope="col">Bulan</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Kendaraan</th>
+                            <th scope="col">Divisi</th>
+                            <th scope="col">Supir</th>
+                        </tr>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @php
+                            $combined = array_map(null, $bulan, $months);
+                        @endphp
+                        @foreach ($combined as $item)
+                            @php
+                                [$value1, $value2] = $item;
+                            @endphp
+                            <tr>
+                                <td>{{ $value1 }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div> --}}
+
 
     </main>
 

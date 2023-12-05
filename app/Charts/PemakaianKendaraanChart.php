@@ -25,11 +25,10 @@ class PemakaianKendaraanChart
             ->groupBy('month')
             ->orderBy('month', 'asc')
             ->get();
-
         $chartData->transform(function ($item) {
-            $date = Carbon::createFromFormat('Y-m', $item->month);
-            $item->month = $date->translatedFormat('F Y');
-            return $item;
+                $date = Carbon::createFromFormat('Y-m', $item->month);
+                $item->month = $date->translatedFormat('F Y');
+                return $item;
         });
 
         $data = $chartData->pluck('count')->toArray();

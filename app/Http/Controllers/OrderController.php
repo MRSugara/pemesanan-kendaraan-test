@@ -104,13 +104,5 @@ class OrderController extends Controller
     {
         return Excel::download(new OrderEkspor, 'datapesanan.xlsx');
     }
-    public function pivot()
-    {
-        $reportData = DB::table('orders')
-            ->select('divisi_id', 'kendaraan_id', DB::raw('MONTHNAME(tanggal_ambil) as bulan'), DB::raw('COUNT(*) as jumlah_pesanan'))
-            ->groupBy('divisi_id', 'kendaraan_id', 'bulan')
-            ->get();
 
-        return Excel::download(new OrderPivotEkspor($reportData), 'pivot_report.xlsx');
-    }
 }

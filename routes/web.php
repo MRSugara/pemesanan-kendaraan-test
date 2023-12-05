@@ -25,10 +25,10 @@ use App\Http\Controllers\UserController;
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
 Route::middleware('auth')->group(function () {
-    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+        Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
         Route::middleware('login:1')->group(function (){
 
@@ -73,7 +73,7 @@ Route::middleware('auth')->group(function () {
                 Route::put('/persetujuan/approve/{id}', [AgreementController::class, 'approved'])->name('order.approved');
                 Route::put('/persetujuan/reject/{id}', [AgreementController::class, 'reject'])->name('order.reject');
 
-    });
+            });
         });
 
 });
