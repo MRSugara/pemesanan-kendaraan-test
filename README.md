@@ -12,7 +12,7 @@ composer install
 
 php artisan migrate
 
-php artisan sb:seed
+php artisan db:seed
 
 php artisan key:generate
 
