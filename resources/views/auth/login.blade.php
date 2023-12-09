@@ -90,21 +90,21 @@
                             <ul class="mx-auto">
                                 <li>
                                     <div class="fs-5">Kabag Administrasi</div>
-                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-6">Username : Yanti</div>
                                     <div class="fs-6">Password : password</div>
                                 </li>
                             </ul>
                             <ul class="mx-auto">
                                 <li>
-                                    <div class="fs-5">Kabag Administrasi</div>
-                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-5">Kabag Keuangan</div>
+                                    <div class="fs-6">Username : Yanto</div>
                                     <div class="fs-6">Password : password</div>
                                 </li>
                             </ul>
                             <ul class="mx-auto">
                                 <li>
-                                    <div class="fs-5">Kabag Administrasi</div>
-                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-5">Kabag Marketing</div>
+                                    <div class="fs-6">Username : Suryana</div>
                                     <div class="fs-6">Password : password</div>
                                 </li>
                             </ul>
