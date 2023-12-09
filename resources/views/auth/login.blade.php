@@ -76,6 +76,41 @@
                         </form>
                     </div>
                 </div>
+                <div class="card border-0 shadow rounded-3 mb-5 mt-2">
+                    <div class="card-body p-sm-3">
+                        <div class="fs-3 text-center mb-2">Akun Login</div>
+                        <div class="d-flex flex-row justify-content-center flex-wrap">
+                            <ul class="mx-auto">
+                                <li>
+                                    <div class="fs-5">Admin</div>
+                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-6">Password : password</div>
+                                </li>
+                            </ul>
+                            <ul class="mx-auto">
+                                <li>
+                                    <div class="fs-5">Kabag Administrasi</div>
+                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-6">Password : password</div>
+                                </li>
+                            </ul>
+                            <ul class="mx-auto">
+                                <li>
+                                    <div class="fs-5">Kabag Administrasi</div>
+                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-6">Password : password</div>
+                                </li>
+                            </ul>
+                            <ul class="mx-auto">
+                                <li>
+                                    <div class="fs-5">Kabag Administrasi</div>
+                                    <div class="fs-6">Username : Admin</div>
+                                    <div class="fs-6">Password : password</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

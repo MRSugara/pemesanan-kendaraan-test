@@ -49,7 +49,7 @@
                             <div class="form-floating mb-3">
                                 <select class="form-select" id="floatingSelect"
                                     aria-label="Floating label select example" name="divisi">
-                                    <option selected disabled>- Pilih Divisi -</option>
+                                    <option selected disabled>-- Pilih Divisi --</option>
                                     @foreach ($divisi as $data)
                                         <option value="{{ $data->id }}">{{ $data->name }}</option>
                                     @endforeach
@@ -60,7 +60,7 @@
                             <div class="form-floating mb-3">
                                 <select class="form-select" id="floatingSelect"
                                     aria-label="Floating label select example" name="role">
-                                    <option selected disabled>- Pilih Role -</option>
+                                    <option selected disabled>-- Pilih Role --</option>
                                     @foreach ($role as $data)
                                         <option value="{{ $data->id }}">{{ $data->name }}</option>
                                     @endforeach
@@ -82,7 +82,24 @@
                         </form>
                     </div>
                 </div>
+                <div class="card border-0 shadow rounded-3 mb-5 mt-2">
+                <div class="card-body p-sm-3">
+                    <div class="fs-3 text-center mb-2">CATATAN</div>
+                    <div class="d-flex flex-row justify-content-center flex-wrap">
+                        <ul class="mx-auto">
+                            <li>
+                                <div class="fs-5">Setelah melakukan registrasi, login terlebih dahulu menggunakan akun admin</div>
+                            </li>
+                            <li>
+                                <div class="fs-5">Lalu masuk ke menu user, dan approve akun yang sudah anda buat</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
             </div>
+            </div>
+
         </div>
     </div>
 </body>
